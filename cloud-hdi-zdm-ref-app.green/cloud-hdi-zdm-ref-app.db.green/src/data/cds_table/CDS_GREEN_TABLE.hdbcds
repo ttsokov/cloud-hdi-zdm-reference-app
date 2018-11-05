@@ -1,0 +1,6 @@
+// CDS green table
+entity CDS_GREEN_TABLE {
+	key ID    : Integer;
+		NAME  : String(100) not null;
+		DUMMY : hana.VARCHAR(1);
+};

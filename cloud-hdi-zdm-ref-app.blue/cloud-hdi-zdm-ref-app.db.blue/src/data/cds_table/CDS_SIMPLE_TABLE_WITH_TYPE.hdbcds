@@ -1,0 +1,7 @@
+using CDS_TYPES_FOR_DATA;
+
+entity CDS_SIMPLE_TABLE_WITH_TYPE {
+	key ID    : Integer;
+		NAME  : CDS_TYPES_FOR_DATA.MY_STRING not null;
+		DUMMY : hana.VARCHAR(1);
+};

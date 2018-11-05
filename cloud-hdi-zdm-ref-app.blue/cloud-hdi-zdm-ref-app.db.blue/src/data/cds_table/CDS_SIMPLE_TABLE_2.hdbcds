@@ -1,0 +1,6 @@
+// CDS simple table
+entity CDS_SIMPLE_TABLE_2 {
+	key ID    : Integer;
+		NAME  : String(100) not null;
+		DUMMY : hana.VARCHAR(1);
+};

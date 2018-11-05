@@ -1,0 +1,8 @@
+using "SQL_SIMPLE_VIEW" as SQL_SIMPLE_VIEW;
+
+view CDS_VIEW_REF_SQL_VIEW as select from SQL_SIMPLE_VIEW {
+	ID,
+	NAME,
+	NAME_LENGTH,
+	DUMMY
+};

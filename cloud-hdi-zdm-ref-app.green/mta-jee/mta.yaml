@@ -1,0 +1,31 @@
+_schema-version: 2.1.0
+ID: cloud-hdi-zdm-ref-app
+version: 0.0.1
+
+modules:
+  - name: cloud-hdi-zdm-ref-app-backend
+    type: java
+    path: ../cloud-hdi-zdm-ref-app.backend.jee.green
+    properties:
+      TARGET_RUNTIME: tomee
+      JBP_CONFIG_RESOURCE_CONFIGURATION: "[tomee/webapps/ROOT/WEB-INF/resources.xml: {service_name_for_DefaultDB : hdi-container}]"
+      SET_LOGGING_LEVEL: "{OpenEJB: DEBUG, OpenEJB.options: DEBUG, OpenEJB.server: DEBUG, OpenEJB.startup: DEBUG, OpenEJB.startup.service: DEBUG, OpenEJB.startup.config: DEBUG, OpenEJB.hsql: DEBUG, openjpa.Tool: DEBUG, openjpa.Runtime: INFO, openjpa.Remote: DEBUG, openjpa.DataCache: DEBUG, openjpa.MetaData: DEBUG, openjpa.Enhance: DEBUG, openjpa.Query: DEBUG, openjpa.jdbc.SQL: DEBUG, openjpa.jdbc.SQLDiag: DEBUG, openjpa.jdbc.JDBC: DEBUG, openjpa.jdbc.Schema: DEBUG}"
+    parameters:
+      disk-quota: 256M
+      buildpack: sap_java_buildpack
+    requires:
+      - name: hdi-container
+      - name: cloud-hdi-zdm-ref-app-db
+
+  - name: cloud-hdi-zdm-ref-app-db
+    type: com.sap.xs.hdi
+    path: ../cloud-hdi-zdm-ref-app.db.green
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: hdi-container
+
+resources:
+  - name: hdi-container
+    type: com.sap.xs.hdi-container

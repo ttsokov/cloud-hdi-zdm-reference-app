@@ -1,0 +1,5 @@
+entity CDS_PERSON_TABLE {
+    key ID    : Integer;
+        FIRST_NAME  : String(20);
+        LAST_NAME  : String(20);
+};

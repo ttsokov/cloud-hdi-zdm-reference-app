@@ -1,0 +1,16 @@
+using "CDS_SIMPLE_TABLE" as CDS_SIMPLE_TABLE;
+using "SQL_SIMPLE_TABLE" as SQL_SIMPLE_TABLE;
+
+context CDS_VIEWS_REF_TABLES {
+    view CDS_VIEW_REF_CDS_TABLE as select from CDS_SIMPLE_TABLE {
+        ID,
+        NAME,
+        DUMMY
+    };
+
+    view CDS_VIEW_REF_SQL_TABLE as select from SQL_SIMPLE_TABLE {
+        ID,
+        NAME,
+        DUMMY
+    };
+};

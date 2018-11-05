@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CALC_SIMPLE_VIEW" applyPrivilegeType="NONE" dataCategory="DEFAULT" dimensionType="" schemaVersion="3.0" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" cacheInvalidationPeriod="HOURLY" enforceSqlExecution="false">
+<descriptions defaultDescription="CALC_SIMPLE_VIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="SQL_SIMPLE_TABLE">
+    <resourceUri>SQL_SIMPLE_TABLE</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="SQL_SIMPLE_TABLE">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping schemaName="" columnObjectName="SQL_SIMPLE_TABLE" columnName="ID"/>
+    </attribute>
+    <attribute id="NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping schemaName="" columnObjectName="SQL_SIMPLE_TABLE" columnName="NAME"/>
+    </attribute>
+    <attribute id="DUMMY" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DUMMY"/>
+      <keyMapping schemaName="" columnObjectName="SQL_SIMPLE_TABLE" columnName="DUMMY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

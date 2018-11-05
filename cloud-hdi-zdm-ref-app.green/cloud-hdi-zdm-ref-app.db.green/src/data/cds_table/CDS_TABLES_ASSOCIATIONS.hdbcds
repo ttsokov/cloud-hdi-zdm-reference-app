@@ -1,0 +1,25 @@
+context CDS_TABLES_ASSOCIATIONS {
+
+    // CDS master table
+    entity CDS_MASTER_TABLE {
+        key ID : Integer;
+			NAME : String(100) not null;
+			CHILDREN : Association[*] to CDS_CHILD_TABLE on CHILDREN.MASTER_ID = ID;
+    };
+
+    // CDS child table
+    entity CDS_CHILD_TABLE {
+		key CHILD_ID : Integer;
+			MASTER_ID  : Integer;
+			NAME       : String(100) not null;
+			MASTER : Association[1..1] to CDS_MASTER_TABLE on MASTER.ID = MASTER_ID;
+    };
+
+    // CDS child table
+    entity CDS_CHILD_TABLE_IMPLICIT {
+        key CHILD_ID : Integer;
+			NAME       : String(100) not null;
+			MASTER : Association[1..1] to CDS_MASTER_TABLE;
+    };
+
+};

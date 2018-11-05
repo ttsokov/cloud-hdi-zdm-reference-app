@@ -1,0 +1,7 @@
+FUNCTION "ns_ignore::ADD_NUM" (x INTEGER, y INTEGER)
+RETURNS result INTEGER
+LANGUAGE SQLSCRIPT
+AS
+BEGIN
+  result := :x + :y;
+END

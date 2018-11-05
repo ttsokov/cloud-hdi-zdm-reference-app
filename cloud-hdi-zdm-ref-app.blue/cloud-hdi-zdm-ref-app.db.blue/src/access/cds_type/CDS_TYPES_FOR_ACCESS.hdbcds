@@ -1,0 +1,20 @@
+context CDS_TYPES_FOR_ACCESS {
+    type MY_INTEGER : Integer;
+    type MY_STRING : String(100);
+
+    type EMPTY_STRUCT {
+    };
+
+    type MY_STRUCT {
+        ID : Integer;
+        NAME : MY_STRING;
+    };
+
+    table type MY_TABLE_TYPE_1 {
+        ID : Integer;
+    };
+
+    type MY_STRUCT_2 : MY_STRUCT;
+
+    type MY_STRUCT_TABLE_TYPE_1 : MY_TABLE_TYPE_1;
+};

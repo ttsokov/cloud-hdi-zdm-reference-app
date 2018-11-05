@@ -1,0 +1,5 @@
+[
+  "src/access/sql_script/SEQ_SELECT_DEFINER.hdbprocedure",
+  "src/access/sql_script/SEQ_SELECT_INVOKER.hdbprocedure",
+  "src/data/cds_table/CDS_SIMPLE_TABLE_2.hdbcds"
+]

@@ -1,0 +1,12 @@
+namespace ns_append.sub;
+
+context MainCtx {
+
+	// CDS namespace table
+  entity CDS_NS_TABLE {
+		key ID    : Integer;
+			NAME  : String(100) not null;
+			DUMMY : hana.VARCHAR(1);
+  };
+
+};

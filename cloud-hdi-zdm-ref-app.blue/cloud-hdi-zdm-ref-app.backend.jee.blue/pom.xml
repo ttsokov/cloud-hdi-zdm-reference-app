@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>cloud-hdi-zdm-ref-app</groupId>
+		<artifactId>cloud-hdi-zdm-ref-app.blue</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+    <artifactId>cloud-hdi-zdm-ref-app.backend.jee.blue</artifactId>
+    <packaging>war</packaging>
+
+	<properties>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<cxf.version>2.2.3</cxf.version>
+	</properties>
+
+    <dependencies>
+<!-- Necessary for javax.ws.rs imports (e.g. javax.ws.rs.ApplicationPath) -->
+ 		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>apache-tomee</artifactId>
+			<version>1.7.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+<!-- Necessary for org.eclipse.persistence.jpa.PersistenceProvider inside persistence.xml -->
+ 		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.6.4</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>cloud-hdi-zdm-ref-app-backend</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>

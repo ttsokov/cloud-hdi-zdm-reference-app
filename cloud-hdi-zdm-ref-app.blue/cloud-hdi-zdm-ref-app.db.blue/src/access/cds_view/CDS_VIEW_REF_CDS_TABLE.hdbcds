@@ -1,0 +1,7 @@
+using CDS_SIMPLE_TABLE as CDS_SIMPLE_TABLE;
+
+view CDS_VIEW_REF_CDS_TABLE as select from CDS_SIMPLE_TABLE {
+	ID,
+	NAME,
+	DUMMY
+};
