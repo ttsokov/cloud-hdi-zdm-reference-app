@@ -1,4 +1,4 @@
-# Cloud HDI ZDM Reference Application
+# Cloud HDI ZDM Reference Application [![Build Status](https://travis-ci.org/SAP/cloud-hdi-zdm-reference-app.svg?branch=master)](https://travis-ci.org/SAP/cloud-hdi-zdm-reference-app)
 
 # Description
 Cloud HDI (HANA Deployment Infrastructure) ZDM (Zero-Downtime Maintenance) Reference Application, or `cloud-hdi-zdm-ref-app`, demonstrates how to develop Multi-Target Applications with HDI content, which support zero-downtime updates. It is based on the [Muti-Target Application (MTA)](https://www.sap.com/documents/2016/06/e2f618e4-757c-0010-82c7-eda71af511fa.html) model and follows the [Zero-Downtime Maintenance (ZDM) Adoption Guideline](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e62731aa735340bfb0c4b7c71b4bf5e7.html) in order to support zero-downtime updates. The update is done by following [Blue-Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html) process. 
