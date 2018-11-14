@@ -4,6 +4,6 @@ ID: cloud-hdi-zdm-ref-app.config
 extends: cloud-hdi-zdm-ref-app
 
 modules:
-  - name: cloud-hdi-zdm-ref-app-db
+  - name: db
     parameters:
       zdm-mode: true
