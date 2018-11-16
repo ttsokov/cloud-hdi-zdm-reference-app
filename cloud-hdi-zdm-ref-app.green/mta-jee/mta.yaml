@@ -3,7 +3,7 @@ ID: cloud-hdi-zdm-ref-app
 version: 0.0.1
 
 modules:
-  - name: cloud-hdi-zdm-ref-app-backend
+  - name: backend
     type: java
     path: ../cloud-hdi-zdm-ref-app.backend.jee.green
     properties:
@@ -15,9 +15,9 @@ modules:
       buildpack: sap_java_buildpack
     requires:
       - name: hdi-container
-      - name: cloud-hdi-zdm-ref-app-db
+      - name: db
 
-  - name: cloud-hdi-zdm-ref-app-db
+  - name: db
     type: com.sap.xs.hdi
     path: ../cloud-hdi-zdm-ref-app.db.green
     parameters:
