@@ -134,8 +134,7 @@ $ # The response should be `HTTP: 404`
 ```
 
 # Known Issues
-* Currently there is one backend module implemented in Java. In future will be provided more backend modules implemented in different languages, like Node.js, Python, etc. 
-* References in module properties in the MTA deployment descriptors are currently not used. They will be used in future.
+* Currently there is one backend module implemented in Java. In future will be provided more backend modules implemented in different languages, like Node.js, Python, etc.
 
 # How to obtain support
 If you need any support, have any question or have found a bug, please report it in the [GitHub bug tracking system](https://github.com/SAP/cloud-hdi-zdm-reference-app/issues).
